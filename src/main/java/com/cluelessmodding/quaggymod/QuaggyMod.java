@@ -1,5 +1,6 @@
 package com.cluelessmodding.quaggymod;
 
+import com.cluelessmodding.quaggymod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,5 +12,6 @@ public class QuaggyMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItems.registerModItems();
 	}
 }

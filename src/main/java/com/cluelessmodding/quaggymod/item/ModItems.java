@@ -23,7 +23,9 @@ import java.util.function.UnaryOperator;
 import static net.minecraft.item.Items.BUCKET;
 
 public class ModItems {
-        public static Item SUSPICIOUS_MILK;
+    public static final Identifier SUSPICIOUS_MILK_ID = Identifier.of(QuaggyMod.MOD_ID, "suspicious_milk");
+
+    public static Item SUSPICIOUS_MILK;
 
         public ModItems() {
         }
@@ -33,7 +35,7 @@ public class ModItems {
         }*/
 
         private static RegistryKey<Item> keyOf(String id) {
-            return RegistryKey.of(RegistryKeys.ITEM, Identifier.ofVanilla(id));
+            return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(QuaggyMod.MOD_ID, id));
         }
 
         /*private static RegistryKey<Item> keyOf(RegistryKey<Block> blockKey) {
@@ -97,7 +99,6 @@ public class ModItems {
             if (item instanceof BlockItem blockItem) {
                 blockItem.appendBlocks(Item.BLOCK_ITEMS, item);
             }
-
             return (Item) Registry.register(Registries.ITEM, key, item);
         }
         /*private static Item registerItem(String name, Item item) {
@@ -106,6 +107,8 @@ public class ModItems {
     public static void registerModItems() {
         QuaggyMod.LOGGER.info("Registering Mod Items for " + QuaggyMod.MOD_ID);
         SUSPICIOUS_MILK = register("suspicious_milk", (new Item.Settings()).rarity(Rarity.EPIC).recipeRemainder(BUCKET).food(ModFoodComponents.SUSPICIOUS_MILK, ModConsumableComponents.SUSPICIOUS_MILK).useRemainder(BUCKET).maxCount(1));
+        QuaggyMod.LOGGER.info("Translation key: " + SUSPICIOUS_MILK.getTranslationKey());
+
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(ModItems.SUSPICIOUS_MILK);

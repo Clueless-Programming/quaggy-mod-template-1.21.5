@@ -1,7 +1,6 @@
 package com.cluelessmodding.quaggymod.item;
 
 import com.cluelessmodding.quaggymod.QuaggyMod;
-import com.cluelessmodding.quaggymod.item.custom.ModConsumableComponents;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 //import net.minecraft.block.Block;
 //import net.minecraft.component.DataComponentTypes;

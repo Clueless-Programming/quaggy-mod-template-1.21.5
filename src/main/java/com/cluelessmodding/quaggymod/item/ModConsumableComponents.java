@@ -1,4 +1,4 @@
-package com.cluelessmodding.quaggymod.item.custom;
+package com.cluelessmodding.quaggymod.item;
 
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;

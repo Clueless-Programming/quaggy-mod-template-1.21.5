@@ -23,7 +23,6 @@ import java.util.function.Function;
 import static net.minecraft.item.Items.BUCKET;
 public class ModItems {
     public static Item SUSPICIOUS_MILK;
-
         public ModItems() {
         }
 

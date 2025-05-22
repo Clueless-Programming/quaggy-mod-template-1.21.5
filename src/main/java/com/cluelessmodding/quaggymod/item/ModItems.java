@@ -1,17 +1,15 @@
 package com.cluelessmodding.quaggymod.item;
 
 import com.cluelessmodding.quaggymod.QuaggyMod;
+import com.cluelessmodding.quaggymod.item.custom.BoomerangItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.entity.mob.MobEntity;
-<<<<<<< HEAD
-=======
 //import net.minecraft.block.Block;
 //import net.minecraft.component.DataComponentTypes;
 //import net.minecraft.component.type.ConsumableComponent;
->>>>>>> bfe593c02db7828b20013dbf3bda33fb309c91a8
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -30,6 +28,7 @@ import java.util.function.Function;
 import static net.minecraft.item.Items.BUCKET;
 public class ModItems {
     public static Item SUSPICIOUS_MILK;
+    public static Item BOOMERANG;
         public ModItems() {
         }
 
@@ -102,18 +101,22 @@ public class ModItems {
 
         public static Item register(RegistryKey<Item> key, Function<Item.Settings, Item> factory) {
             return register(key, factory, new Item.Settings());
-        }
-
-        private static Item registerItem(String name, Item item) {
-            return Registry.register(Registries.ITEM, Identifier.of(QuaggyMod.MOD_ID, name), item);
         }*/
+
+        private static Item register(String name, Item item) {
+            return Registry.register(Registries.ITEM, Identifier.of(QuaggyMod.MOD_ID, name), item);
+        }
 
     public static void registerModItems() {
         QuaggyMod.LOGGER.info("Registering Mod Items for " + QuaggyMod.MOD_ID);
         SUSPICIOUS_MILK = register("suspicious_milk", (new Item.Settings()).rarity(Rarity.EPIC).recipeRemainder(BUCKET).food(ModFoodComponents.SUSPICIOUS_MILK, ModConsumableComponents.SUSPICIOUS_MILK).useRemainder(BUCKET).maxCount(1));
+        BOOMERANG = register("boomerang", new BoomerangItem(new Item.Settings().maxCount(1)));
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(ModItems.SUSPICIOUS_MILK);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(ModItems.BOOMERANG);
         });
     }
 }

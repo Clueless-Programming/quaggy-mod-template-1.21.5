@@ -1,3 +1,6 @@
 {
-  "item.quaggymod.suspicious_milk": "Suspicious Milk"
+  "item.quaggymod.suspicious_milk": "Suspicious Milk",
+  "item.quaggymod.boomerang" : "Boomerang",
+
+  "entity.quaggymod.boomerang" : "Boomerang"
 }

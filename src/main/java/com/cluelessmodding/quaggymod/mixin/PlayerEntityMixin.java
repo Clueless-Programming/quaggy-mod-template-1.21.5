@@ -3,13 +3,10 @@ package com.cluelessmodding.quaggymod.mixin;
 import com.cluelessmodding.quaggymod.item.ModItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-<<<<<<< HEAD
 import net.minecraft.entity.mob.MobEntity;
-=======
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.CowEntity;
->>>>>>> bfe593c02db7828b20013dbf3bda33fb309c91a8
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;

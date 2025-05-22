@@ -6,6 +6,12 @@ import net.minecraft.block.Block;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.entity.mob.MobEntity;
+<<<<<<< HEAD
+=======
+//import net.minecraft.block.Block;
+//import net.minecraft.component.DataComponentTypes;
+//import net.minecraft.component.type.ConsumableComponent;
+>>>>>>> bfe593c02db7828b20013dbf3bda33fb309c91a8
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;

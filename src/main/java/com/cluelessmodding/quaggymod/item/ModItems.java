@@ -2,16 +2,10 @@ package com.cluelessmodding.quaggymod.item;
 
 import com.cluelessmodding.quaggymod.QuaggyMod;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-<<<<<<< HEAD
 import net.minecraft.block.Block;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.entity.mob.MobEntity;
-=======
-//import net.minecraft.block.Block;
-//import net.minecraft.component.DataComponentTypes;
-//import net.minecraft.component.type.ConsumableComponent;
->>>>>>> 4972cc4e989cb37fe57b48285ef835ebc2c75a15
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;

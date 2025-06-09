@@ -1,6 +1,6 @@
 {
   "item.quaggymod.suspicious_milk": "Suspicious Milk",
-  "item.quaggymod.boomerang" : "Boomerang",
-
-  "entity.quaggymod.boomerang" : "Boomerang"
+  "item.quaggymod.spaghetti": "Spaghetti",
+  "item.quaggymod.raw_meatball": "Raw Meatball",
+  "item.quaggymod.cooked_meatball": "Cooked Meatball"
 }

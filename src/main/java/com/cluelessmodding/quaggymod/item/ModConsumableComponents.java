@@ -14,6 +14,9 @@ public class ModConsumableComponents {
     public static final ConsumableComponent FOOD = food().build();
     public static final ConsumableComponent DRINK = drink().build();
     public static final ConsumableComponent SUSPICIOUS_MILK;
+    public static final ConsumableComponent SPAGHETTI;
+    public static final ConsumableComponent RAW_MEATBALL;
+    public static final ConsumableComponent COOKED_MEATBALL;
 
     public static ConsumableComponent.Builder food() {
         return ConsumableComponent.builder().consumeSeconds(1.6F).useAction(UseAction.EAT).sound(SoundEvents.ENTITY_GENERIC_EAT).consumeParticles(true);
@@ -24,5 +27,8 @@ public class ModConsumableComponents {
     }
     static {
         SUSPICIOUS_MILK = drink().consumeEffect(new ApplyEffectsConsumeEffect(List.of(new StatusEffectInstance(StatusEffects.NAUSEA, -1, 256), new StatusEffectInstance(StatusEffects.SLOWNESS, -1, 5)))).build();
+        SPAGHETTI = food().build();
+        RAW_MEATBALL = food().build();
+        COOKED_MEATBALL = food().build();
     }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "quaggymod:item/boomerang"
+    "layer0": "quaggymod:item/raw_meatball"
   }
 }

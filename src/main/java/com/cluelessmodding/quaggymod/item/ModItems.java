@@ -23,6 +23,11 @@ import java.util.function.Function;
 import static net.minecraft.item.Items.BUCKET;
 public class ModItems {
     public static Item SUSPICIOUS_MILK;
+    public static Item SPAGHETTI;
+    public static Item RAW_MEATBALL;
+    public static Item COOKED_MEATBALL;
+    //public static Item SPAGHETTI_AND_MEATBALLS;
+
         public ModItems() {
         }
 
@@ -104,9 +109,16 @@ public class ModItems {
     public static void registerModItems() {
         QuaggyMod.LOGGER.info("Registering Mod Items for " + QuaggyMod.MOD_ID);
         SUSPICIOUS_MILK = register("suspicious_milk", (new Item.Settings()).rarity(Rarity.EPIC).recipeRemainder(BUCKET).food(ModFoodComponents.SUSPICIOUS_MILK, ModConsumableComponents.SUSPICIOUS_MILK).useRemainder(BUCKET).maxCount(1));
+        SPAGHETTI = register("spaghetti", (new Item.Settings()).food(ModFoodComponents.SPAGHETTI, ModConsumableComponents.SPAGHETTI));
+        RAW_MEATBALL = register("raw_meatball", (new Item.Settings()).food(ModFoodComponents.RAW_MEATBALL, ModConsumableComponents.RAW_MEATBALL));
+        COOKED_MEATBALL = register("cooked_meatball", (new Item.Settings()).food(ModFoodComponents.COOKED_MEATBALL, ModConsumableComponents.COOKED_MEATBALL));
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(ModItems.SUSPICIOUS_MILK);
+            entries.add(ModItems.SPAGHETTI);
+            entries.add(ModItems.RAW_MEATBALL);
+            entries.add(ModItems.COOKED_MEATBALL);
+            //entries.add(ModItems.SPAGHETTI_AND_MEATBALLS);
         });
     }
 }

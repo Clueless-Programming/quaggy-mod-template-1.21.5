@@ -20,13 +20,14 @@ import net.minecraft.util.Rarity;
 import java.util.function.Function;
 //import java.util.function.UnaryOperator;
 
+import static net.minecraft.item.Items.BOWL;
 import static net.minecraft.item.Items.BUCKET;
 public class ModItems {
     public static Item SUSPICIOUS_MILK;
     public static Item SPAGHETTI;
     public static Item RAW_MEATBALL;
     public static Item COOKED_MEATBALL;
-    //public static Item SPAGHETTI_AND_MEATBALLS;
+    public static Item SPAGHETTI_AND_MEATBALLS;
 
         public ModItems() {
         }
@@ -112,13 +113,14 @@ public class ModItems {
         SPAGHETTI = register("spaghetti", (new Item.Settings()).food(ModFoodComponents.SPAGHETTI, ModConsumableComponents.SPAGHETTI));
         RAW_MEATBALL = register("raw_meatball", (new Item.Settings()).food(ModFoodComponents.RAW_MEATBALL, ModConsumableComponents.RAW_MEATBALL));
         COOKED_MEATBALL = register("cooked_meatball", (new Item.Settings()).food(ModFoodComponents.COOKED_MEATBALL, ModConsumableComponents.COOKED_MEATBALL));
+        SPAGHETTI_AND_MEATBALLS = register("spaghetti_and_meatballs", (new Item.Settings()).food(ModFoodComponents.SPAGHETTI_AND_MEATBALLS, ModConsumableComponents.SPAGHETTI_AND_MEATBALLS).useRemainder(BOWL));
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(ModItems.SUSPICIOUS_MILK);
             entries.add(ModItems.SPAGHETTI);
             entries.add(ModItems.RAW_MEATBALL);
             entries.add(ModItems.COOKED_MEATBALL);
-            //entries.add(ModItems.SPAGHETTI_AND_MEATBALLS);
+            entries.add(ModItems.SPAGHETTI_AND_MEATBALLS);
         });
     }
 }

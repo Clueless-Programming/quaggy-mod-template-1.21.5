@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "quaggymod:cooked_meatball",
+    "quaggymod:spaghetti",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "count": 1,
+    "id": "quaggymod:spaghetti_and_meatballs"
+  }
+}

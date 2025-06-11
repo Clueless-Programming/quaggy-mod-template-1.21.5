@@ -17,6 +17,7 @@ public class ModConsumableComponents {
     public static final ConsumableComponent SPAGHETTI;
     public static final ConsumableComponent RAW_MEATBALL;
     public static final ConsumableComponent COOKED_MEATBALL;
+    public static final ConsumableComponent SPAGHETTI_AND_MEATBALLS;
 
     public static ConsumableComponent.Builder food() {
         return ConsumableComponent.builder().consumeSeconds(1.6F).useAction(UseAction.EAT).sound(SoundEvents.ENTITY_GENERIC_EAT).consumeParticles(true);
@@ -30,5 +31,6 @@ public class ModConsumableComponents {
         SPAGHETTI = food().build();
         RAW_MEATBALL = food().build();
         COOKED_MEATBALL = food().build();
+        SPAGHETTI_AND_MEATBALLS = food().build();
     }
 }
